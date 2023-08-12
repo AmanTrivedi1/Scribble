@@ -30,12 +30,12 @@ export const MobileSidebar = ({
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden hover:bg-white/5"
+          className="md:hidden  hover:bg-white/5"
         >
           <Menu className="text-white/80 " />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="p-0">
+      <SheetContent side="left" className="p-0  border-r-black">
         <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} />
       </SheetContent>
     </Sheet>

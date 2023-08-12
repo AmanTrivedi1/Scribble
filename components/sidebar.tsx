@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
-
 import {
   Code,
   ImageIcon,
@@ -16,6 +15,7 @@ import {
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
+import { FreeCounter } from "./free-counter";
 
 const poppins = Montserrat({ weight: "600", subsets: ["latin"] });
 
@@ -63,13 +63,11 @@ const routes = [
   },
 ];
 
-export const Sidebar = ({
-  apiLimitCount = 0,
-  isPro = false,
-}: {
-  apiLimitCount: number;
-  isPro: boolean;
-}) => {
+interface SidebarProps {
+  apiLimitCount: 0;
+}
+
+export const Sidebar = ({ apiLimitCount = 0 }: SidebarProps) => {
   const pathname = usePathname();
 
   return (
@@ -103,6 +101,7 @@ export const Sidebar = ({
           ))}
         </div>
       </div>
+      <FreeCounter apiLimitCount={apiLimitCount} />
     </div>
   );
 };
