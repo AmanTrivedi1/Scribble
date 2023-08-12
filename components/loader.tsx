@@ -1,8 +1,6 @@
-import Image from "next/image";
-
 export const Loader = () => {
   return (
-    <div role="status">
+    <div role="status" className="">
       <svg
         aria-hidden="true"
         className="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-green-500"
