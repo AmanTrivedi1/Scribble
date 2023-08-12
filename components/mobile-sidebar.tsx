@@ -11,7 +11,7 @@ export const MobileSidebar = ({
   apiLimitCount = 0,
   isPro = false,
 }: {
-  apiLimitCount: number;
+  apiLimitCount: any;
   isPro: boolean;
 }) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -30,13 +30,13 @@ export const MobileSidebar = ({
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden  hover:bg-white/5"
+          className="md:hidden hover:bg-white/5"
         >
-          <Menu className="text-white/80 " />
+          <Menu className="text-white" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="p-0  border-r-black">
-        <Sidebar apiLimitCount={apiLimitCount} />
+      <SheetContent side="left" className="p-0">
+        <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} />
       </SheetContent>
     </Sheet>
   );
